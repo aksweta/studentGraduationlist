@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table';
+import Graduationlist from './components/Graduationlist';
 
 function App() {
+
+  
+    const subjects = ["Javascript", "Java","React", "Redux","Nodejs"]
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <><div className="back">
+
+      <Table subjects={subjects} name="Vinay" />
+      <Table subjects={subjects} name="Sweta" />
+      <Table subjects={subjects} name="Vatsal" />
+      <Table subjects={subjects} name="Ronak" />
+      
+
+
+      <div>
+        <Graduationlist />
+      </div>
+
     </div>
-  );
+    
+    </>
+  )
 }
 
 export default App;

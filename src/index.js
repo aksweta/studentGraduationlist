@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './configureStore';
+import {Provider} from 'react-redux';
+import Table from './components/Table';
+import Graduationlist from './components/Graduationlist.jsx';
+
 
 ReactDOM.render(
-  <React.StrictMode>
+    <Provider store={store}>
     <App />
-  </React.StrictMode>,
+    <Table/>
+    <Graduationlist/>
+    </Provider>,
   document.getElementById('root')
 );
 
